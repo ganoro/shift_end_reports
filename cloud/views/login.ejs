@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="stylesheets/goldfish.css" />
+	<title>GoldFish Login</title>
+</head>
+<body id="login_body" style="text-align:center;font-size:1em">
+	<img src="images/logo_2x.png" class="logo"/>
+	<form id="login" method="post" action="login">
+		<ul>
+			<li id="msgRow">
+				<label class="error"><%=msg %></label>
+			</li>
+			<li id="usernameRow">
+				<label class="description" for="username"><%=lbl_username %></label>
+				<div>
+					<input id="username" name="username" class="element text medium" type="text" maxlength="255" value="">
+				</div>
+			</li>
+			<li id="passwordRow">
+				<label class="description" for="password"><%=lbl_password %></label>
+				<div>
+					<input id="password" name="password" class="element text medium" type="password" maxlength="255" value="">
+				</div>
+			</li>
+			<li id="submitRow">
+				<div>
+					<input id="submit" name="submit" class="element text medium" type="submit" maxlength="255" value="Submit">
+				</div>
+			</li>
+		</ul>	
+	</form>
+</body>
+</html>

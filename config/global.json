@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "goldfish-shift_end_reports"
+        }, 
+        "goldfish-shift_end_reports": {
+            "applicationId": "2MHnY6mENTre86neL5d1SaQc1orqKW6ecHSQuWlU", 
+            "masterKey": "H70uYeAOyvAOAMD3DXrE75dYswXcZZaP0gtbYmr7"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.12"
+    }
+}

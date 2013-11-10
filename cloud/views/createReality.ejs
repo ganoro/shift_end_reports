@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Create Company</title>
+	<link rel="stylesheet" href="stylesheets/goldfish.css" />
+	<script>
+		function updateTimeZoneOffset()
+		{
+			var offset = document.getElementsByName("GMTOffset")[0];
+			offset.value = new Date().getTimezoneOffset();
+		}
+	</script>
+</head>
+<body id="main_body" class="no_guidelines">
+	
+	<img id="top" src="images/top.png" alt="">
+	<div id="form_container">
+	<h1><a><%=title %></a></h1>
+	<form id="createReality" class="appnitro"  method="post" action="createReality" onsubmit="updateTimeZoneOffset()">
+		<ul >
+			<li id="li_3" >
+				<label class="description" for="element_3"><%=lbl_pcId%></label>
+				<div>
+					<input id="element_3" name="element_3" class="element text small" type="text" maxlength="255" value=""/> 
+				</div> 
+			</li>
+			<li id="li_4" >
+				<label class="description" for="element_4"><%=lbl_monthlySales %></label>
+				<div>
+					<input id="element_4" name="element_4" class="element text medium" type="text" maxlength="255" value=""/> 
+				</div> 
+			</li>
+			<li id="li_5" >
+				<label class="description" for="element_5"><%=lbl_numOfShifts%></label>
+				<div>
+					<input id="element_5" name="element_5" class="element text medium" type="text" maxlength="255" value=""/> 
+				</div> 
+			</li>
+			<li id="li_7" >
+				<label class="description" for="element_7"><%=lbl_valuesList %></label>
+				<div>
+					<textarea id="element_7" name="element_7" class="element textarea small"></textarea> 
+				</div> 
+			</li>
+			<li id="li_6" >
+				<label class="description" for="element_6"><%=lbl_value1Description %></label>
+				<div>
+					<textarea id="element_6" name="element_6" class="element textarea small"></textarea> 
+				</div> 
+			</li>
+			<li id="li_11" >
+				<label class="description" for="element_11"><%=lbl_value2Description %></label>
+				<div>
+					<textarea id="element_11" name="element_11" class="element textarea small"></textarea> 
+				</div> 
+			</li>
+			<li id="li_10" >
+				<label class="description" for="element_10"><%=lbl_value3Description %></label>
+				<div>
+					<textarea id="element_10" name="element_10" class="element textarea small"></textarea> 
+				</div> 
+			</li>
+			<li id="li_9" >
+				<label class="description" for="element_9"><%=lbl_value4Description %></label>
+				<div>
+					<textarea id="element_9" name="element_9" class="element textarea small"></textarea> 
+				</div> 
+			</li>
+			<li id="li_8" >
+				<label class="description" for="element_8"><%=lbl_value5Description %></label>
+				<div>
+					<textarea id="element_8" name="element_8" class="element textarea small"></textarea> 
+				</div> 
+			</li>
+			<li id="li_12" >
+				<label class="description" for="element_12"><%=lbl_myChalange %></label>
+				<div>
+					<textarea id="element_12" name="element_12" class="element textarea small"></textarea> 
+				</div> 
+			</li>
+			<li id="li_13" >
+				<label class="description" for="element_13"><%=lbl_chalangeAwarness %></label>
+				<div>
+					<textarea id="element_13" name="element_13" class="element textarea small"></textarea> 
+				</div> 
+			</li>
+			<li id="li_14" >
+				<label class="description" for="element_14"><%=lbl_actionPlanning %></label>
+				<div>
+					<textarea id="element_14" name="element_14" class="element textarea small"></textarea> 
+				</div> 
+			</li>
+			<li id="li_17" >
+				<label class="description" for="element_17"><%=lbl_startDate %></label>
+		 		<input id="element_17" name="element_17" class="element text" type="date">	 
+			</li>
+			<li id="li_16" >
+				<label class="description" for="element_16"><%=lbl_startTime %></label>
+				<input id="element_16" name="element_16" class="element text " type="time"/> :  
+			</li>
+			<li id="li_15" >
+				<label class="description" for="element_15"><%=lbl_endTime %></label>
+				<input id="element_15" name="element_15" class="element text " type="time"/> : 
+			</li>
+			<li class="buttons">
+				<input type="hidden" name="GMTOffset" id="GMTOffset" value=""/>
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+			</li>
+		</ul>
+	</form>
+</body>
+</html>

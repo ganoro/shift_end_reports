@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Find and Delete</title>
+	<link rel="stylesheet" href="stylesheets/goldfish.css" />
+</head>
+<body id="main_body" class="no_guidelines">
+	
+	<img id="top" src="images/top.png" alt="">
+	<div id="form_container1">
+		<h1><a><%=title_user%></a></h1>
+		<form id="deleteUser" class="appnitro" method="post" action="deleteUser">
+			<ul>
+				<li id="li_1">
+					<label class="description" for="element_1"><%=lbl_username %></label>
+					<div>
+						<input id="username" name="username" class="element text medium" type="text" maxlength="255" value="">
+					</div>
+				</li>
+				<li class="buttons">
+					<input id="deleteUser" class="button_text" type="submit" name="deleteUser" value="Delete User" />
+				</li>
+			</ul>
+		</form>
+	</div>
+	<div id="form_container2">
+	<h1><a><%=title_company%></a></h1>
+	<form id="deleteCompany" class="appnitro" method="post" action="deleteCompany">
+		<ul>
+			<li id="li_1">
+				<label class="description" for="element_1"><%=lbl_pcId %></label>
+				<div>
+					<input id="pcId" name="pcId" class="element text medium" type="text" maxlength="255" value="">
+				</div>
+			</li>
+			<li class="buttons">
+				<input id="deleteCompany" class="button_text" type="submit" name="deleteCompany" value="Delete Company" />
+			</li>
+		</ul>
+	</form>
+	</div>
+	<div id="form_container3">
+	<h1><a><%=title_reality%></a></h1>
+	<form id="deleteReality" class="appnitro" method="post" action="deleteReality">
+		<ul>
+			<li id="li_1">
+				<label class="description" for="element_1"><%=lbl_username %></label>
+				<div>
+					<input id="username" name="username" class="element text medium" type="text" maxlength="255" value="">
+				</div>
+			</li>
+			<li id="li_2">
+				<label class="description" for="element_1"><%=lbl_year %></label>
+				<div>
+					<input id="year" name="year" class="element text medium" type="number" value="">
+				</div>
+			</li>
+			<li id="li_3">
+				<label class="description" for="element_1"><%=lbl_month %></label>
+				<div>
+					<input id="month" name="month" class="element text medium" type="number" value="">
+				</div>
+			</li>
+			<li class="buttons">
+				<input id="deleteReality" class="button_text" type="submit" name="deleteReality" value="Delete Reality/Month" />
+			</li>
+		</ul>
+	</form>
+	</div>
+	<img id="bottom" src="images/bottom.png" alt=""/>
+	
+</body>
+</html>

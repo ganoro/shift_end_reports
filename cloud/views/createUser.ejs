@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Create Company</title>
+	<link rel="stylesheet" href="stylesheets/goldfish.css" />
+</head>
+<body id="main_body" class="no_guidelines">
+	
+	<img id="top" src="images/top.png" alt="">
+	<div id="form_container">
+	<h1><a><%=title %></a></h1>
+	<form id="createUser" class="appnitro"  method="post" action="createUser">
+		<ul >
+			<li id="li_4" >
+				<label class="description" for="element_4"><%=lbl_company %></label>
+				<select name="element_4">
+					<% for(var i=0; i<companies.length; i++){ var comp = companies[i]%>
+						<option value=<%=comp["objectId"] %>><%=comp["name"] %></option>
+					<%}%>
+				</select>
+			</li>
+			<li id="li_4_1" >
+				<label class="description" for="element_4_1"><%=lbl_branch %></label>
+				<div>
+					<input id="element_4_1" name="element_4_1" class="element text medium" type="text" maxlength="255" value="<%=branch %>"/>
+				</div>
+			</li>
+			<li id="li_5" >
+				<label class="description" for="element_5"><%=lbl_firstName %></label>
+				<div>
+					<input id="element_5" name="element_5" class="element text medium" type="text" maxlength="255" value="<%=firstName %>"/>
+				</div>
+			</li>
+			<li id="li_5_2" >
+				<label class="description" for="element_5_2"><%=lbl_lastName %></label>
+				<div>
+					<input id="element_5_2" name="element_5_2" class="element text medium" type="text" maxlength="255" value="<%=lastName %>"/>
+				</div>
+			</li>
+			<li id="li_6" >
+				<label class="description" for="element_6"><%=lbl_email %></label>
+				<div>
+					<input id="element_6" name="element_6" class="element text small" type="text" maxlength="255" value="<%=email %>"/>
+				</div>
+			</li>
+			<li id="li_3" >
+				<label class="description" for="element_3"><%=lbl_pcId %></label>
+				<div>
+					<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value="<%=pcId %>"/>
+				</div>
+			</li>
+			<li id="li_8" >
+				<label class="description" for="element_8"><%=lbl_birthDate %></label>
+				<div>
+					<input id="element_8" name="element_8" class="element text medium" type="date" maxlength="255" value=""/>
+				</div>
+			</li>
+			<li id="li_10" >
+				<fieldset>
+					<legend class="description"><%=lbl_gender%></legend>
+					<%=lbl_male %><input id="element_10_1" name="element_10" class="element radio" type="radio" value="1" />
+					<%=lbl_female %><input id="element_10_2" name="element_10" class="element radio" type="radio" value="2" />
+				</fieldset>
+				
+			</li>
+			<li id="li_11" >
+				<fieldset>
+					<legend><%=lbl_jobTitle %></legend>
+					<%=lbl_worker %><input id="element_11_1" name="element_11" class="element radio" type="radio" value="1" />
+					<%=lbl_manager %><input id="element_11_2" name="element_11" class="element radio" type="radio" value="2" />
+				</fieldset>
+			</li>
+			<li id="li_9" >
+				<label class="description" for="element_9"><%=lbl_seniority %></label>
+				<div>	
+					<input id="element_9" name="element_9" class="element text small" type="text" maxlength="255" value="<%=seniority %>"/>
+				</div>
+			</li>
+			<li class="buttons">
+		    	<input type="hidden" name="form_id" value="712479" />
+		    	<input type="hidden" name="create" value="<%=create %>"/>
+		    	<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		    </li>
+		</ul>
+	</form>	
+	</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Create Company</title>
+	<link rel="stylesheet" href="stylesheets/goldfish.css" />
+</head>
+<body id="main_body" class="no_guidelines">
+	<% 
+	for(var i=0; i<elements.length; i++){
+		var element = elements[i];
+		if(element.type == "title")
+		{
+			%>
+			<div><h1><bold><%=element.key%></bold></h1></div>
+			<%
+			continue;
+		}
+		%><br/>
+		<div><span><h3><%=element.key%></h3></span>
+		<div>
+		<%
+		if(element.tag == "list")
+		{
+			for(var j=0; j<element.value.length; j++)
+			{
+				if( (typeof(element.value[j]) == "object") )//&& (element.value[j].constructor.toString().indexOf("Array") != -1) )
+				{
+					%>
+					<span><%=JSON.stringify(element.value[j])%></span><br/>
+					<%
+				}
+				else
+				{
+				%>
+				<span><%=element.value[j]%></span><br/>
+				<%
+				}
+			}
+		}
+		else
+		{
+			if( (typeof(element.value) == "object") )//&& (element.value.constructor.toString().indexOf("Array") != -1))
+			{
+				%>
+				<span><%=JSON.stringify(element.value)%></span>
+				<%
+			}
+			else
+			{
+				%>
+				<span><%=element.value%></span>
+				<%
+			}
+		}
+		%>
+		</div>
+		<%
+	}
+	%>
+</body>
+</html>
